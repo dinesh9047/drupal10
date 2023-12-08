@@ -1,0 +1,54 @@
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/db
+web/sites/*/private
+files/*
+.idea
+.docksal
+.htaccess
+composer.phar
+
+# Avoid accidental modification of pantheon.upstream.yml in sites
+# created from this upstream
+pantheon.upstream.yml
+
+# Pantheon commits a settings.php for environment-specific settings.
+# Place local settings in settings.local.php
+web/sites/*/settings.local.php
+web/sites/*/settings.php
+
+# Note that services.local.yml is not loaded by default. If you would like
+# to use this file add the following to your settings.local.php file:
+#   $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
+web/sites/*/services.local.yml
+web/sites/development.services.yml
+
+# ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
+web/sites/default/**/files
+web/sites/default/**/private
+web/modules/contrib
+web/core/*
+web/themes/contrib
+vendor
+
+# Ignore SimpleTest multi-site environment.
+web/sites/simpletest
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.gz
+
+# Logs and databases #
+######################
+*.log
+*.sql
